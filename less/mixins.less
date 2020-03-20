@@ -1,1 +1,34 @@
 // Mixins Here
+
+.flex(@direction, @justify, @align) {
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-content: @align;
+  }
+  
+  .width-height (@width, @height) {
+    width: @width;
+    height: @height;
+  }
+  
+  .btn (@font-size, @bg-color, @color) {
+    font-size: @font-size;
+    color: @color;
+    background-color: @bg-color;
+    font-weight: 600;
+    width: 29%;
+    height: 12%;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 7px;
+    border-radius: 5px;
+  }
+  
+  .easeOut {
+    transition: all 0.5s ease-in;
+  }
+  
+  .bold {
+    font-weight: 600;
+  }
