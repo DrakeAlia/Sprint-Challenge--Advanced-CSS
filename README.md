@@ -34,13 +34,37 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+Responsive and adaptive sites are the same in that they both change their appearance based on the browser that is being used and viewed. 
+
+Where they are different is that responsive sites respond to the size of the browser at any point. The site adjusts its layout for the screen no matter what the browser width might be.
+
+Adaptive sites will change and adapt to the width of the browser at certain points. Adaptive is used when you want the browser to be at a specific width and the browser adapts to the layout. 
+Responsive is more smother when the environment changes whereas adaptive snaps into place depending on its environment.
+
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Mobile-first means that getting a mobile responsive website first, that your website needs to be mobile-friendly.
+
+Desktop-first means designing for the highest specifications, the site being refined on the desktop and its enough to be merely functional on mobile. 
+Mobile-first being more recommended because it’s more accessible for users compared to the desktop-first. 
+
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+The typical default browser font-size is 62.5% of 16px which would make 16px = 1.6rem. This means the user’s default browser font-size is changed, for example 20px which 1.6rem would now eqaul to 20px. 
+
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessing is used in CSS to make things more structured and easier to maintain. When working on larger projects/code you might want to use preprocessing to reduce repetitive tasks and reduce the number of errors you might get otherwise with regular CSS. It’s very helpful when trying to import or nest your code in a more organized method if you prefer that type of way of structuring.
+
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+I like preprocessing to make my CSS a little bit more organized, nesting being the most useful for me. It’s nice using nesting for CSS since you already use it for HTML, so its already a familiar concept. The compiler is something that gives me trouble at times or just forgetting that I have to enable preprocessing through my terminal can be a pain at times since I have to enable and disable when your not using it.
+
+
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
