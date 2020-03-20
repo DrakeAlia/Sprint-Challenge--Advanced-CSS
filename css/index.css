@@ -1,0 +1,490 @@
+easeOut {
+    transition: all 0.5s ease-in;
+  }
+  .bold {
+    font-weight: 600;
+  }
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+     v2.0 | 20110126
+     License: none (public domain)
+  */
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  blockquote,
+  q {
+    quotes: none;
+  }
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  html,
+  body {
+    font-family: "Ubuntu", sans-serif;
+    color: #5e6164;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Russo One", sans-serif;
+    color: #23293b;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3.2rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+  p {
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
+  .container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  button {
+    border-radius: 20px;
+    border: 1px solid #454a59;
+    background-color: #454a59;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+  }
+  button:active {
+    transform: scale(0.95);
+  }
+  button:focus {
+    outline: none;
+  }
+  button.ghost {
+    background-color: transparent;
+    border-color: #ffffff;
+  }
+  form {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+  }
+  input {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+  }
+  .big-box {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 7%;
+  }
+  .contain {
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+    max-width: 100%;
+    min-height: 480px;
+  }
+  .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+  }
+  .sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+  }
+  .contain.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+  }
+  .sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+  }
+  .contain.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+  }
+  @keyframes show {
+    0%,
+    49.99% {
+      opacity: 0;
+      z-index: 1;
+    }
+    50%,
+    100% {
+      opacity: 1;
+      z-index: 5;
+    }
+  }
+  .overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+  }
+  .contain.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+  }
+  .overlay {
+    background: #454a59;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #ffffff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+  .container-sign-in.right-panel-active .overlay {
+    transform: translateX(50%);
+  }
+  .overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+  .overlay-left {
+    transform: translateX(-20%);
+  }
+  .container-sign-in.right-panel-active .overlay-left {
+    transform: translateX(0);
+  }
+  .overlay-right {
+    right: 0;
+    transform: translateX(0);
+  }
+  .overlay-right h1 {
+    color: white;
+    text-decoration: #333;
+  }
+  .container-sign-in.right-panel-active .overlay-right {
+    transform: translateX(20%);
+  }
+  .social-container {
+    margin: 20px 0;
+  }
+  .social-container a {
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+  }
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 87px;
+    background: #f6f6f6;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .nav-container .logo {
+    width: auto;
+  }
+  .nav-container nav {
+    width: 400px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .nav-container nav a {
+    text-decoration: none;
+    font-family: #454a59;
+    padding: 0 0 0 6;
+    font-size: 1.55rem;
+    color: black;
+  }
+  footer {
+    color: #22283B;
+    background: #f4f4f4;
+    padding: 20px 0;
+    border: 1px double #e0e0e0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home .intro img {
+    border-radius: 5px;
+    width: 100%;
+  }
+  .home .intro h2 {
+    padding: 15px;
+  }
+  .home .intro p {
+    padding: 0 15px;
+  }
+  .home .space-images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .home .space-images img {
+    width: 28%;
+    margin: 20px 2.5%;
+    border-radius: 20px;
+    height: 100%;
+  }
+  @media (max-width: 500px) {
+    .home .space-images img {
+      width: 100%;
+    }
+  }
+  @media (max-width: 500px) {
+    .home .space-images .sky,
+    .home .space-images .launch {
+      display: none;
+    }
+  }
+  .home .visit-planets {
+    padding: 15px;
+  }
+  .home .visit-planets h3 {
+    margin-top: 11px;
+  }
+  .home .visit-planets p {
+    margin-top: 13px;
+  }
+  .home .walk {
+    margin-top: 60px;
+    border-top: 1px solid #dee2e6;
+    padding: 50px 60px;
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 500px) {
+    .home .walk {
+      flex-direction: column;
+      justify-content: baseline;
+      padding: 15px;
+    }
+  }
+  .home .walk .walk-text {
+    width: 50%;
+  }
+  @media (max-width: 500px) {
+    .home .walk .walk-text {
+      width: 100%;
+      order: 2;
+    }
+  }
+  .home .walk .walk-text .button {
+    font-size: 1.85rem;
+    color: white;
+    background-color: black;
+    font-weight: 600;
+    width: 29%;
+    height: 12%;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 7px;
+    border-radius: 5px;
+  }
+  .home .walk .walk-text .button:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.5s ease-in;
+  }
+  @media (max-width: 500px) {
+    .home .walk .walk-text .button {
+      width: 100%;
+      height: 65px;
+      padding-top: 22px;
+    }
+  }
+  .home .walk .walk-text h3 {
+    margin-bottom: 10px;
+  }
+  .home .walk .walk-text p {
+    margin-bottom: 26px;
+  }
+  .home .walk .walk-img {
+    width: 46%;
+    margin-left: 4%;
+  }
+  @media (max-width: 500px) {
+    .home .walk .walk-img {
+      width: 100%;
+      margin-left: 0;
+      padding-bottom: 2.5rem;
+    }
+  }
+  .home .walk .walk-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
