@@ -1,7 +1,7 @@
 // Home Content
 
 .home {
-
+/*** Intro *****/
   .intro {
     img {
       border-radius: 5px;
@@ -17,7 +17,8 @@
     }
   
   }
-
+  
+/****** Space ****/
   .space-images {
     display: flex;
     flex-wrap: wrap;
@@ -42,6 +43,7 @@
     }
   }
 
+/***** Planets ******/
   .visit-planets {
     padding: 15px;
 
@@ -54,6 +56,7 @@
     }
   }
 
+/***** Walk ******/
   .walk {
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
@@ -62,7 +65,7 @@
     justify-content: center;
 
     @media @mobile {
-      flex-direction: row;
+      flex-direction: column;
       justify-content: baseline;
       padding: 15px;
     }
